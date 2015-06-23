@@ -18,7 +18,7 @@ module.exports = (options) ->
   app = require options.app-path
 
   server = express!
-    .use "/#{options.public-path}", express.static path.join(options.app-path, options.public-path)
+    .use express.static path.join(options.app-path, options.public-path), index: false
     .use body-parser.urlencoded extended: false
     .use cookie-parser!
 

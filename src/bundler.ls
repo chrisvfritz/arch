@@ -89,7 +89,7 @@ exports.bundle = (options, changed) ->
       # Start the webpack dev server
       server = new webpack-dev-server bundler, do
         filename: 'app.js'
-        content-base: path.join options.app-path, options.public-path
+        content-base: options.app-path
         hot: true # Enable hot loading
         quiet: true
         no-info: true
